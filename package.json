@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Coding the curbs",
   "main": "app.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
@@ -12,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/Tomvandenberg11/coding-the-curbs.git"
   },
-  "author": "Tim, Fabian, Sietse and Tom",
+  "author": "Tim the Roller, Fabian Fish, Sietse Rose and Tom from the Mountain",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Tomvandenberg11/coding-the-curbs/issues"
@@ -27,6 +28,7 @@
     "mongodb": "^3.6.4",
     "mongoose": "^5.11.18",
     "node-fetch": "^3.2.4",
+    "nodemailer": "^6.7.5",
     "nodemon": "^2.0.16"
   },
   "devDependencies": {

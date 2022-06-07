@@ -84,6 +84,7 @@ header img {
     margin-top: 60px;
     transform: scale(1);
     transition: all .2s;
+    margin-bottom: 50px;
     width: fit-content;
 }
 

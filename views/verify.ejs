@@ -1,0 +1,22 @@
+<%- include('./components/head.ejs') -%>
+
+<div class="container margin-top30">
+    <h1>Vraag je toegangscode op</h1>
+    <p>Er wordt een code verstuurd naar je e-mailadres. Hiermee kan je je reservering aanpassen.</p>
+    <section>
+        <form action="/code" method="GET">
+
+            <label>Je nummerbord</label>
+            <input type="text" maxlength="8" name="kenteken" required>
+
+            <label>Je e-mailadres</label>
+            <input type="email" name="email" required>
+
+            <input type="submit" value="Vraag toegangscode op">
+        </form>
+
+    </section>
+</div>
+
+<%- include('./components/footer.ejs') -%>
+
