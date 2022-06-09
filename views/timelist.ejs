@@ -1,8 +1,8 @@
 <%- include('./components/head.ejs') -%>
 
 <div class="container margin-top30">
-  <h1>Hoelaat wil je hier staan?</h1>
-  <section>
+  <section class="responsive">
+    <h1>Hoelaat wil je hier staan?</h1>
     <p>Kies maximaal 2 tijden</p>
 
     <form action="/addtime" method="post" class="timelistclass" name="checkTime" id="checkTime" novalidate>
@@ -37,7 +37,7 @@
         <input type="checkbox" name="time" id="1530" value="15:15 - 15:30" required hidden>
         <label for="1530">15:15 - 15:30</label>
       </div>
-      <input type="submit" value="Kies deze tijd(en)">
+      <input type="submit" value="Kies deze tijd(en)" id="btn">
     </form>
   </section>
 </div>

@@ -1,22 +1,22 @@
 <%- include('./components/head.ejs') -%>
 
-    <div class="container margin-top30">
+<div class="container margin-top30">
+    <article>
         <h1>Reserveer smart zone van <%= time %></h1>
         <p>Zo weet je zeker dat je er kunt staan.</p>
-        <form action="/reserve" method="POST">
+    </article>
+    <form action="/reserve" method="POST">
 
-            <input type="text" name="time" value="<%= time %>" hidden>
+        <input type="text" name="time" value="<%= time %>" hidden>
 
-            <label>Je nummerbord</label>
-            <input type="text" maxlength="8" name="kenteken" required>
+        <label>Je nummerbord</label>
+        <input type="text" maxlength="8" name="kenteken" required>
 
-            <label>Je e-mailadres</label>
-            <input type="email" name="email" required>
+        <label>Je e-mailadres</label>
+        <input type="email" name="email" required>
 
-
-            <input type="submit" value="Maak reservering">
-        </form>
-    </div>
+        <input type="submit" value="Maak reservering">
+    </form>
+</div>
 
 <%- include('./components/footer.ejs') -%>
-

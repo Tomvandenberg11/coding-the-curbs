@@ -4,6 +4,7 @@ const app = express()
 import compression from 'compression'
 import bodyParser from 'body-parser'
 import MongoClient from'mongodb'
+import MapboxClient from 'mapbox'
 
 import * as dotenv from 'dotenv';
 import 'dotenv/config.js';
@@ -14,7 +15,8 @@ import { router } from './router/router.js';
 const port = process.env.PORT || 1234
 
 const {
-  MONGO_PASS
+  MONGO_PASS,
+  GEO_TOKEN
 } = process.env
 dotenv.config()
 
@@ -43,19 +45,33 @@ export let Reservation = {
   kenteken: ''
 }
 
-  MongoClient
-    // Maakt de connectie met de database
-    .connect(`mongodb+srv://codingthecurbsminor2022:${MONGO_PASS}@codingthecurbs.ln7wtad.mongodb.net/?retryWrites=true&w=majority`, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    })
+MongoClient
+  // Maakt de connectie met de database
+  .connect(`mongodb+srv://codingthecurbsminor2022:${MONGO_PASS}@codingthecurbs.ln7wtad.mongodb.net/?retryWrites=true&w=majority`, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
 
-    .then(connection => {
-      const db = connection.db('reservations')
-      reservationsCollection = db.collection('dcderservations')
-    })
+  .then(connection => {
+    const db = connection.db('reservations')
+    reservationsCollection = db.collection('dcderservations')
+  })
 
 
 app.listen(port, () => {
   console.log(`Example app listening on port http://localhost:${port}`)
 })
+
+// var MapboxClient = require('mapbox');
+
+var client = new MapboxClient(`${GEO_TOKEN}`);
+
+client.geocodeForward('Chester, NJ')
+  .then(function(res) {
+    // res is the http response, including: status, headers and entity properties
+    var data = res.entity; // data is the geocoding result as parsed JSON
+    console.log(data);
+  })
+  .catch(function(err) {
+    // handle errors
+  });

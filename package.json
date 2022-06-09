@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/Tomvandenberg11/coding-the-curbs.git"
   },
-  "author": "Tim the Roller, Fabian Fish, Sietse Rose and Tom from the Mountain",
+  "author": "Tim the dough Roller, Fabian Fish, Sietse Rose and Tom from the Mountain",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Tomvandenberg11/coding-the-curbs/issues"
@@ -25,6 +25,7 @@
     "dotenv": "^16.0.1",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
+    "mapbox": "^1.0.0-beta10",
     "mongodb": "^3.6.4",
     "mongoose": "^5.11.18",
     "node-fetch": "^3.2.4",
