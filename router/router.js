@@ -8,6 +8,8 @@ import { reserveRoute } from "./routes/reserve.js";
 import { timeListRoute } from "./routes/timelist.js";
 import { verifyCodeRoute } from "./routes/verifyCode.js";
 import { offlineRoute } from "./routes/offline.js";
+// import { loaderRoute } from "./routes/loader.js";
+// import { errorRoute } from "./routes/error.js";
 
 export const router = express.Router()
 
