@@ -1,14 +1,14 @@
 const checkBoxLimit = () => {
   let inputName = "time";
-  var checkBoxGroup = document.forms["checkTime"][inputName];
-  var checkBoxButton = document.getElementById("btn");
-  var maxAantal = document.getElementById("maxAantal");
+  let checkBoxGroup = document.forms["checkTime"][inputName];
+  const checkBoxButton = document.getElementById("btn");
+  const maxAantal = document.getElementById("maxAantal");
   checkBoxButton.disabled = true;
-  var limit = 2;
-  for (var i = 0; i < checkBoxGroup.length; i++) {
-    var checkBoxGroup = document.forms["checkTime"][inputName];
+  let limit = 2;
+  for (let i = 0; i < checkBoxGroup.length; i++) {
+    let checkBoxGroup = document.forms["checkTime"][inputName];
     checkBoxGroup[i].onclick = function () {
-      var checkedcount = 0;
+      let checkedcount = 0;
       console.log(checkBoxGroup);
       for (var i = 0; i < checkBoxGroup.length; i++) {
         checkedcount += checkBoxGroup[i].checked ? 1 : 0;
@@ -27,7 +27,6 @@ const checkBoxLimit = () => {
         checkBoxGroup.forEach((element) => (element.name = "time"));
       } else {
         inputName = "time2";
-        checkBoxButton.disabled = true;
         checkBoxGroup.forEach((element) => (element.name = "time"));
       }
 
