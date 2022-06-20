@@ -22,13 +22,6 @@ const checkBoxLimit = () => {
       if (checkedcount >= 1) {
         checkBoxButton.disabled = false;
       }
-      if (checkedcount === 0 || checkedcount === 1) {
-        inputName = "time";
-        checkBoxGroup.forEach((element) => (element.name = "time"));
-      } else {
-        inputName = "time2";
-        checkBoxGroup.forEach((element) => (element.name = "time"));
-      }
 
       console.log(checkedcount);
     };
