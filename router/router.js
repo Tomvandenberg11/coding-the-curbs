@@ -36,6 +36,9 @@ import {
 import {
   mapRoute
 } from './routes/map.js';
+import {
+  errorRoute
+} from './routes/error.js';
 
 export const router = express.Router()
 
@@ -53,3 +56,4 @@ router
   .get('/successful', successfulRoute)
   .post('/delete', deleteRoute)
   .get('/map', mapRoute)
+  .get('/error', errorRoute)
