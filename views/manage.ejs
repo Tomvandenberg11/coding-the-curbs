@@ -6,16 +6,16 @@
   <p>Het overzicht van plekken</p>
   <section>
     <ul>
-      <li class="managedata">
+      <li class="manageData">
         <form action="/delete" method="post" class="managePage" name="checkTime" id="checkTime">
-          <div>
-              <p><%= reservation.email %></p>
-              <p>Kenteken: <%= reservation.kenteken %></p>
-              <input type="number" name="code" value="<%= reservation.code %>" hidden>
+          <div class="manageDatasection1">
+            <p><%= reservation.email %></p>
+            <p>Kenteken: <%= reservation.kenteken %></p>
+            <input type="number" name="code" value="<%= reservation.code %>" hidden>
           </div>
-          <div>
+          <div class="manageDatasection2">
             <p>Om: <%= reservation.time %></p>
-            <input type="submit" value="Verwijder" id="verwijderBtn">
+            <input type="submit" value="Verwijder" class="verwijderBtn">
           </div>
         </form>
       </li>
