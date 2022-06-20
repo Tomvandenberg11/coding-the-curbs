@@ -1,33 +1,31 @@
 const checkBoxLimit = () => {
-  const checkBoxGroup = document.forms['checkTime']['time']
-  const checkBoxButton = document.getElementById("btn")
-  const maxCount = document.getElementById("maxAantal")
+  let inputName = "time";
+  let checkBoxGroup = document.forms["checkTime"][inputName];
+  const checkBoxButton = document.getElementById("btn");
+  const maxAantal = document.getElementById("maxAantal");
   checkBoxButton.disabled = true;
-  const limit = 2
-
+  let limit = 2;
   for (let i = 0; i < checkBoxGroup.length; i++) {
-    checkBoxGroup[i].onclick = () => {
-      let checkedCount = 0
-      for ( let i = 0; i < checkBoxGroup.length; i++ ) {
-        checkedCount += (checkBoxGroup[i].checked) ? 1 : 0
+    let checkBoxGroup = document.forms["checkTime"][inputName];
+    checkBoxGroup[i].onclick = function () {
+      let checkedcount = 0;
+      console.log(checkBoxGroup);
+      for (var i = 0; i < checkBoxGroup.length; i++) {
+        checkedcount += checkBoxGroup[i].checked ? 1 : 0;
       }
-      if (checkedCount > limit) {
-        console.log("You can select maximum of " + limit + " checkboxes.")
-        maxCount.innerHTML = "Je kan maar maximaal 2 tijden selecteren"
-        this.checked = false
-        maxCount.style.color = 'red'
+      if (checkedcount > limit) {
+        console.log("You can select maximum of " + limit + " checkboxes.");
+        maxAantal.innerHTML = "Je kan maar maximaal 2 tijden selecteren";
+        this.checked = false;
+        maxAantal.style.color = "red";
       }
-      checkBoxButton.disabled = checkedCount < 1
-    }
+      if (checkedcount >= 1) {
+        checkBoxButton.disabled = false;
+      }
+
+      console.log(checkedcount);
+    };
   }
-}
+};
 
-checkBoxLimit()
-
-
-let time = {}
-
-const addTimeDB = () => {
-  const fullTime = document.querySelector('').value
-  time.push(fullTime)
-}
+checkBoxLimit();
