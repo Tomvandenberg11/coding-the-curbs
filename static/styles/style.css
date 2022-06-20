@@ -5,6 +5,7 @@
   --blue: #4f52c9;
   --purple: #524dd0;
   --lightblue: #59ffec;
+  --darkRed: red;
   --rajdhani: "Rajdhani", sans-serif;
   --roboto: "Roboto", sans-serif;
 }
@@ -52,6 +53,15 @@ header img {
   margin-bottom: 0.5em;
 }
 
+.container h3 {
+  font-family: var(--roboto);
+  max-width: 500px;
+  text-align: left;
+  font-size: 1em;
+  margin-bottom: 0.5em;
+  font-weight: 300;
+}
+
 .container p {
   font-family: var(--roboto);
   font-weight: 300;
@@ -61,10 +71,9 @@ header img {
   display: flex;
   flex-direction: column;
   max-width: 500px;
-  margin: 0 auto;
+  margin: 1em auto 0;
   font-family: var(--roboto);
   font-weight: 300;
-  margin-top: 1em;
 }
 
 .container form label {
@@ -86,11 +95,9 @@ header img {
   border-width: 3px;
   font-family: var(--rajdhani);
   font-weight: 700;
-  margin: 0 auto;
-  margin-top: 40px;
+  margin: 40px auto 50px;
   transform: scale(1);
   transition: all 0.2s;
-  margin-bottom: 50px;
   width: fit-content;
 }
 
@@ -101,9 +108,7 @@ header img {
   border-width: 3px;
   font-family: var(--rajdhani);
   font-weight: 700;
-  margin: 0 auto;
-  margin-top: 40px;
-  margin-bottom: 50px;
+  margin: 40px auto 50px;
 }
 
 .container form input[type="submit"]:active:enabled {
@@ -152,7 +157,7 @@ footer {
   margin-top: 50px;
 }
 
-.managedata {
+.manageData {
   list-style: none;
   font-family: var(--roboto);
   margin: 1rem 0;
@@ -160,18 +165,19 @@ footer {
   padding: 0.5rem;
 }
 
-.managedata > div:nth-of-type(1) {
+.manageDatasection1 {
   width: 100%;
   margin: 0.5rem 0;
 }
 
-.managedata > div:nth-of-type(2) {
+.manageDatasection2 {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.managedata > div:nth-of-type(2) p {
+.manageData > div:nth-of-type(2) p {
   padding-top: 0.5em;
 }
 
@@ -181,6 +187,7 @@ footer {
 
 .managePage {
   margin: 0 !important;
+  max-width: 100% !important;
 }
 
 .timelistclass input:checked + label {
@@ -229,12 +236,10 @@ section .timelistclass label {
   border-width: 3px;
   font-family: var(--rajdhani);
   font-weight: 700;
-  margin: 0 auto;
+  margin: 10px auto;
   padding: 1em 3em;
-  margin-top: 10px;
   transform: scale(1);
   transition: all 0.2s;
-  margin-bottom: 10px;
   width: fit-content;
 }
 
@@ -243,13 +248,11 @@ section .timelistclass label {
   color: var(--purple);
   font-family: var(--rajdhani);
   font-weight: 600;
-  margin: 0 auto;
+  margin: 0 auto 10px;
   padding: 0.5em 2.5em;
   border: 3px solid var(--blue);
-  margin-top: 0px;
   transform: scale(1);
   transition: all 0.2s;
-  margin-bottom: 10px;
   width: fit-content;
   border-radius: 5px;
 }
@@ -303,25 +306,23 @@ section .timelistclass label {
   fill: #78a975;
 }
 
-#verwijderBtn {
+.verwijderBtn {
   background-color: var(--purple);
     color: var(--white);
     border: 3px solid var(--black);
-    border-width: 3px;
     font-family: var(--rajdhani);
     font-weight: 700;
     transform: scale(1);
     transition: all 0.2s;
     width: fit-content;
-    /* -webkit-appearance: none;
-    -moz-appearance: none;
-    text-decoration: none; */
     padding: 0.5em;
     border-radius: 5px;
     border-color: var(--blue);
+    margin: 0 !important;
+    font-size: 0.9em !important;
 }
 
-#verwijderBtn:hover {
+.verwijderBtn:hover {
   background-color: #ededed;
   color: var(--blue);
   border-color: var(--blue);
@@ -330,6 +331,52 @@ section .timelistclass label {
   font-weight: 700;
 }
 
+h3 {
+  font-family: var(--rajdhani);
+    max-width: 500px;
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 0.5em;
+}
+
+.succesfulPage a {
+  background-color: var(--purple);
+    color: var(--white);
+    border: 3px solid var(--black);
+    border-width: 3px;
+    font-family: var(--rajdhani);
+    font-weight: 700;
+    font-size: 1.2em;
+    transform: scale(1);
+    transition: all 0.2s;
+    width: fit-content;
+    padding: 0.5em;
+    border-radius: 5px;
+    border-color: var(--blue);
+    margin-top: 2em;
+}
+
+.succesfulPage a:hover {
+  background-color: #ededed;
+    color: var(--blue);
+    border-color: var(--blue);
+    border-width: 3px;
+    font-family: var(--rajdhani);
+    font-weight: 700;
+}
+
+.succesfulPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.errorMessage {
+  color: var(--darkRed);
+  margin-top: 10px;
+  font-weight: bold !important;
+  font-size: 16px;
+}
 
 @media only screen and (max-width: 425px) {
   #mainbutton{

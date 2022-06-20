@@ -33,7 +33,9 @@ import {
 import {
   deleteRoute
 } from './routes/deleteRoute.js';
-import { mapRoute } from './routes/map.js';
+import {
+  mapRoute
+} from './routes/map.js';
 
 export const router = express.Router()
 
@@ -41,7 +43,7 @@ router
   .get('/', homeRoute)
   .get('/verify', verifyRoute)
   .get('/manage', checkVerifyRoute)
-  .post('/addTime', addTimeRoute)
+  .post('/addTime', addTimeRoute, )
   .post('/reservation', reservationRoute)
   .get('/timeList', timeListRoute)
   .post('/verifyCode', verifyCodeRoute)
@@ -51,4 +53,3 @@ router
   .get('/successful', successfulRoute)
   .post('/delete', deleteRoute)
   .get('/map', mapRoute)
-

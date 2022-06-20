@@ -2,26 +2,26 @@
 
 <div class="container margin-top30">
   <h1>Manage</h1>
-  <% if (reservation.time) { %>
+  <% if (reservation.kenteken) { %>
   <p>Het overzicht van plekken</p>
   <section>
     <ul>
-      <li class="managedata">
-        <div>
-          <form action="/delete" method="post" class="managePage" name="checkTime" id="checkTime">
+      <li class="manageData">
+        <form action="/delete" method="post" class="managePage" name="checkTime" id="checkTime">
+          <div class="manageDatasection1">
             <p><%= reservation.email %></p>
             <p>Kenteken: <%= reservation.kenteken %></p>
             <input type="number" name="code" value="<%= reservation.code %>" hidden>
-        </div>
-        <div>
-          <p>Om: <%= reservation.time %></p>
-          <input type="submit" value="Verwijder" id="verwijderBtn">
-        </div>
+          </div>
+          <div class="manageDatasection2">
+            <p>Om: <%= reservation.time %></p>
+            <input type="submit" value="Verwijder" class="verwijderBtn">
+          </div>
         </form>
       </li>
     </ul>
   </section>
-  <%} else {%> <h1>Het is rustig hier ...</h1> <%}%>
+  <%} else {%> <h3>Er zijn geen reserveringen meer met deze kenteken + e-mail combinatie</h3> <%}%>
 </div>
 
 <%- include('./components/footer.ejs') -%>

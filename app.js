@@ -3,61 +3,35 @@ import express from 'express'
 const app = express()
 import compression from 'compression'
 import bodyParser from 'body-parser'
-import MongoClient from 'mongodb'
-// import MapboxClient from 'mapbox'
 
-import * as dotenv from 'dotenv';
-import 'dotenv/config.js';
-import { router } from './router/router.js';
+import 'dotenv/config.js'
+import {router} from './router/router.js'
+import {connectDB} from './modules/mongoClient.js'
 
 
 // SETTINGS GLOBAL VARIABLES
 const port = process.env.PORT || 1234
 
-const {
-  MONGO_PASS,
-  GEO_TOKEN
-} = process.env
-dotenv.config()
-
-// Link the templating engine to the express app
+// LINKING TEMPLATE ENGINE TO EXPRESS
 app.set('view engine', 'ejs')
 
-// Tell the views engine/ejs where the template files are stored (Settingname, value)
+// TELLING EJS WHERE THE VIEWS ARE
 app.set('views', 'views')
 
+// SETTING CACHE CONTROL
 app.use(/.*-[0-9a-f]{10}\..*/, (req, res, next) => {
   res.setHeader('Cache-Control', 'max-age=365000000, immutable')
   next()
 })
 
-// Tell express to use a 'static' folder
+// INITIALIZE STATIC FOLDER, COMPRESSION, BODYPARSER AND ROUTER
 app.use(express.static('static'))
 app.use(compression())
 app.use(bodyParser())
 app.use(router)
 
-export let reservationsCollection
-
-export let Reservation = {
-  time: '',
-  email: '',
-  kenteken: '',
-  code: ''
-}
-
-MongoClient
-  // Maakt de connectie met de database
-  .connect(`mongodb+srv://codingthecurbsminor2022:${MONGO_PASS}@codingthecurbs.ln7wtad.mongodb.net/?retryWrites=true&w=majority`, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(connection => {
-    const db = connection.db('reservations')
-    reservationsCollection = db.collection('dcderservations')
-  })
-
-
+// MAKE CONNECTION TO DATABASE MODULE
+connectDB()
 
 app.listen(port, () => {
   console.log(`Example app listening on port http://localhost:${port}`)

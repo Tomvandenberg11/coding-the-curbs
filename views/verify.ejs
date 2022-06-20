@@ -3,6 +3,9 @@
 <div class="container margin-top30">
     <h1>Vraag je toegangscode op</h1>
     <p>Er wordt een code verstuurd naar je e-mailadres. Hiermee kan je je reservering aanpassen.</p>
+    <% if (errorMessage) {%>
+      <p class="errorMessage"><%= errorMessage %></p>
+    <%} %>
     <section>
         <form action="/verifyCode" method="POST">
 

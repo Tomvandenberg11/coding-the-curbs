@@ -1,6 +1,5 @@
-import {
-  reservationsCollection
-} from "../../app.js";
+import {reservationsCollection} from './../../modules/mongoClient.js'
+
 
 export const checkVerifyRoute = async (req, res) => {
   const code = req.body.code
@@ -16,7 +15,7 @@ export const checkVerifyRoute = async (req, res) => {
 
       let filtered = result.filter(result, item => item.code === code)
       filtered = filtered[Object.keys(filtered)[0]]
-      // console.log(filtered)
+      console.log(filtered)
 
       res.render('manage', {
         title: 'Manage your reservation',
