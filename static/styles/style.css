@@ -327,6 +327,46 @@ section .timelistclass label {
   font-weight: 700;
 }
 
+h3 {
+  font-family: var(--rajdhani);
+    max-width: 500px;
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 0.5em;
+}
+
+.succesfulPage a {
+  background-color: var(--purple);
+    color: var(--white);
+    border: 3px solid var(--black);
+    border-width: 3px;
+    font-family: var(--rajdhani);
+    font-weight: 700;
+    font-size: 1.2em;
+    transform: scale(1);
+    transition: all 0.2s;
+    width: fit-content;
+    padding: 0.5em;
+    border-radius: 5px;
+    border-color: var(--blue);
+    margin-top: 2em;
+}
+
+.succesfulPage a:hover {
+  background-color: #ededed;
+    color: var(--blue);
+    border-color: var(--blue);
+    border-width: 3px;
+    font-family: var(--rajdhani);
+    font-weight: 700;
+}
+
+.succesfulPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .errorMessage {
   color: var(--darkRed);
   margin-top: 10px;
