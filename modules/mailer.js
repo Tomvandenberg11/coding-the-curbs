@@ -1,5 +1,5 @@
 import nodemailer from 'nodemailer'
-import * as dotenv from "dotenv"
+import * as dotenv from 'dotenv'
 
 const {
   MAIL_PASS

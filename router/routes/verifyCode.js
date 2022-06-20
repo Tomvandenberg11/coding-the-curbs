@@ -1,5 +1,5 @@
 import Mailer from "../../modules/mailer.js";
-import { reservationsCollection } from "../../app.js";
+import {reservationsCollection} from './../../modules/mongoClient.js'
 
 export const verifyCodeRoute = async (req, res) => {
   const email = req.body.email

@@ -1,6 +1,4 @@
-import {
-    reservationsCollection
-} from "../../app.js";
+import {reservationsCollection} from './../../modules/mongoClient.js'
 
 export const deleteRoute = async (req, res) => {
     const code = req.body.code
