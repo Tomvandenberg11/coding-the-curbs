@@ -1,32 +1,23 @@
-// var footerButton1 = document.getElementById('footer-button-1')
-// var footerButton2 = document.getElementById('footer-button-2')
-// console.log(footerButton1);
-// footerButton1.classList.add('active')
-// footerButton2.classList.remove('active')
-
 const checkBoxLimit = () => {
-  var checkBoxGroup = document.forms['checkTime']['time']
-  var checkBoxButton = document.getElementById("btn")
-  var maxAantal = document.getElementById("maxAantal")
+  const checkBoxGroup = document.forms['checkTime']['time']
+  const checkBoxButton = document.getElementById("btn")
+  const maxCount = document.getElementById("maxAantal")
   checkBoxButton.disabled = true;
-  var limit = 2;
-  for (var i = 0; i < checkBoxGroup.length; i++) {
-    checkBoxGroup[i].onclick = function () {
-      var checkedcount = 0;
-      for (var i = 0; i < checkBoxGroup.length; i++) {
-        checkedcount += (checkBoxGroup[i].checked) ? 1 : 0;
+  const limit = 2
+
+  for (let i = 0; i < checkBoxGroup.length; i++) {
+    checkBoxGroup[i].onclick = () => {
+      let checkedCount = 0
+      for ( let i = 0; i < checkBoxGroup.length; i++ ) {
+        checkedCount += (checkBoxGroup[i].checked) ? 1 : 0
       }
-      if (checkedcount > limit) {
-        console.log("You can select maximum of " + limit + " checkboxes.");
-        maxAantal.innerHTML = "Je kan maar maximaal 2 tijden selecteren";
-        this.checked = false;
-        maxAantal.style.color = 'red';
+      if (checkedCount > limit) {
+        console.log("You can select maximum of " + limit + " checkboxes.")
+        maxCount.innerHTML = "Je kan maar maximaal 2 tijden selecteren"
+        this.checked = false
+        maxCount.style.color = 'red'
       }
-      if (checkedcount >= 1) {
-        checkBoxButton.disabled = false;
-      } else {
-        checkBoxButton.disabled = true;
-      }
+      checkBoxButton.disabled = checkedCount < 1
     }
   }
 }
@@ -37,23 +28,6 @@ checkBoxLimit()
 let time = {}
 
 const addTimeDB = () => {
-
-  const fulltime = document.querySelector('').value
-
-  time.push(fulltime)
+  const fullTime = document.querySelector('').value
+  time.push(fullTime)
 }
-// }
-
-// if (window.location.href.indexOf("manage") > -1) {
-//   footerButton1.classList.add('active')
-//   footerButton2.classList.remove('active')
-// }
-
-// var sPath = window.location.pathname;
-// var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
-// console.log(sPage);
-// if (sPage == "index.php") {
-
-// } else if (sPage == "contact.php") {
-
-// }

@@ -7,21 +7,21 @@
   <section>
     <ul>
       <li class="managedata">
-        <div>
-          <form action="/delete" method="post" class="managePage" name="checkTime" id="checkTime">
-            <p><%= reservation.email %></p>
-            <p>Kenteken: <%= reservation.kenteken %></p>
-            <input type="number" name="code" value="<%= reservation.code %>" hidden>
-        </div>
-        <div>
-          <p>Om: <%= reservation.time %></p>
-          <input type="submit" value="Verwijder" id="verwijderBtn">
-        </div>
+        <form action="/delete" method="post" class="managePage" name="checkTime" id="checkTime">
+          <div>
+              <p><%= reservation.email %></p>
+              <p>Kenteken: <%= reservation.kenteken %></p>
+              <input type="number" name="code" value="<%= reservation.code %>" hidden>
+          </div>
+          <div>
+            <p>Om: <%= reservation.time %></p>
+            <input type="submit" value="Verwijder" id="verwijderBtn">
+          </div>
         </form>
       </li>
     </ul>
   </section>
-  <%} else {%> <h1>Het is rustig hier ...</h1> <%}%>
+  <%} else {%> <h3>Er zijn geen reserveringen meer met deze kenteken + e-mail combinatie</h3> <%}%>
 </div>
 
 <%- include('./components/footer.ejs') -%>

@@ -1,6 +1,5 @@
 import nodemailer from 'nodemailer'
 import * as dotenv from "dotenv"
-import {reservationsCollection} from './../app.js'
 
 const {
   MAIL_PASS
@@ -19,44 +18,20 @@ const transporter = nodemailer.createTransport({
   }
 })
 
-let userMail, userPlate, userCode
+const Mailer = (email, plate, userCode) => {
 
-const Mailer = (email, plate) => {
-  userMail = email
-  userPlate = plate
+  const mailOptions = {
+    from: '"Coding the Curbs" <codingthecurbs@gmail.com',
+    to: email,
+    subject: 'Je bevestigingscode voor ' + plate,
+    html: "Hallo!<br><p>Hierbij je bevestigingscode: <br><b>" + userCode + "</b><br><br>Hiermee kan je je reservering wijzigen of verwijderen. <br><br>Groetjes,<br>Coding the curbs</p>"
+  }
 
-  let allReservations
-
-  reservationsCollection.find().toArray()
-    .then(result => {
-      allReservations = result
-    })
-    .then(() => {
-      allReservations.filter = (obj, predicate) =>
-        Object.assign(...Object.keys(obj)
-          .filter( key => predicate(obj[key]) )
-          .map( key => ({ [key]: obj[key] }) ) )
-
-      let filtered = allReservations.filter(allReservations, item => item.email === userMail && item.kenteken === userPlate)
-      filtered = filtered[Object.keys(filtered)[0]]
-
-      userCode = filtered.code
-    })
-    .then(() => {
-      const mailOptions = {
-        from: '"Coding the Curbs" <codingthecurbs@gmail.com',
-        to: email,
-        subject: 'Je bevestigingscode voor ' + plate,
-        html: "Hallo!<br><p>Hierbij je bevestigingscode: <br><b>" + userCode + "</b><br><br>Hiermee kan je je reservering wijzigen of verwijderen. <br><br>Groetjes,<br>Coding the curbs</p>"
-      }
-
-      transporter.sendMail(mailOptions, function(error){
-        if (error) {
-          console.log(error);
-        }
-      })
-    })
-    .catch(err => console.log(err))
+  transporter.sendMail(mailOptions, function(error){
+    if (error) {
+      console.log(error);
+    }
+  })
 }
 
 export default Mailer
