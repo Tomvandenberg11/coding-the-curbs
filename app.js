@@ -64,3 +64,16 @@ MongoClient
 app.listen(port, () => {
   console.log(`Example app listening on port http://localhost:${port}`)
 })
+
+
+app.use(function(req, res, next) {
+  res.status(404);
+  // respond with html page
+  if (req.accepts('html')) {
+    res.render('error', { url: req.url,title:"There is an error" });
+    return;
+  }else{
+  // default to plain-text. send()
+  res.type('txt').send('Not found');
+  }
+});
