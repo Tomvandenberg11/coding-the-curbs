@@ -1,18 +1,19 @@
 <%- include('./components/head.ejs') -%>
 
 <div class="container margin-top30">
-    <h1>Voer je toegangscode in</h1>
-    <p>Voer hier je toegangscode in die je zojuist in je e-mail hebt gehad.</p>
-    <section>
-        <form action="/checkVerify" method="POST">
+    <div class="verifyCode">
+        <h1>Voer je toegangscode in</h1>
+        <p>Voer hier je toegangscode in die je zojuist in je e-mail hebt gehad.</p>
+        <section>
+            <form action="/checkVerify" method="POST">
 
-            <label>Je code</label>
-            <input type="text" maxlength="8" name="code" required>
+                <label>Je code</label>
+                <input type="text" maxlength="8" name="code" required>
 
-            <input type="submit" value="Verifieer">
-        </form>
-
-    </section>
+                <input type="submit" value="Verifieer">
+            </form>
+        </section>
+    </div>
 </div>
 
 <%- include('./components/footer.ejs') -%>

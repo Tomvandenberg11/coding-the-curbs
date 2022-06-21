@@ -4,9 +4,9 @@ const footerButton3 = document.getElementById('footer-button-3')
 footerButton1.classList.add('active')
 
 
-var sPath = window.location.pathname;
-var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
-console.log(sPage);
+const sPath = window.location.pathname
+const sPage = sPath.substring(sPath.lastIndexOf('/') + 1)
+
 if (sPage === "") {
     footerButton1.classList.add('active')
 } else if (sPage === "addtime" || sPage === "timelist" || sPage === "addtime" || sPage === "succesful") {
