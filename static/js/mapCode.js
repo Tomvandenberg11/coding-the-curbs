@@ -15,43 +15,63 @@ const map = new mapboxgl.Map({
   hash: true,
 });
 
-// https://bl.ocks.org/chriswhong/8977c0d4e869e9eaf06b4e9fda80f3ab used for marker code
-class ClickableMarker extends mapboxgl.Marker {
-  // new method onClick, sets _handleClick to a function you pass in
-  onClick(handleClick) {
-    this._handleClick = handleClick;
-    return this;
-  }
+//https://docs.mapbox.com/help/tutorials/custom-markers-gl-js/
+const geojson = {
+  type: "FeatureCollection",
+  features: [
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [5.123448523735618, 52.082773415719515],
+      },
+      properties: {
+        title: "Smartzone Utrecht",
+        description: "",
+        reservatie: "Om 13:00-13:30 gereserveerd"
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [5.22237, 52.0827],
+      },
+      properties: {
+        title: "Smartzone Zeist",
+        description: "",
+        reservatie: "Om 14:00-14:15 gereserveerd"
+      },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [5.22237, 52.1827],
+      },
+      properties: {
+        title: "Smartzone Lage Vuursche",
+        description: "",
+        reservatie: "Om 12:00-12:15 gereserveerd"
+      },
+    },
+  ],
+};
 
-  // the existing _onMapClick was there to trigger a popup
-  // but we are hijacking it to run a function we define
-  _onMapClick(e) {
-    const targetElement = e.originalEvent.target;
-    const element = this._element;
+// add markers to map
+for (const feature of geojson.features) {
+  // create a HTML element for each feature
+  const el = document.createElement("div");
+  el.className = "marker";
 
-    if (
-      this._handleClick &&
-      (targetElement === element || element.contains(targetElement))
-    ) {
-      this._handleClick();
-    }
-  }
-}
-
-// All palen
-const palen = [
-  {
-    name: "Utrecht",
-    coordinates: [5.123448523735618, 52.082773415719515],
-  },
-];
-
-palen.forEach((paal) => {
-  new ClickableMarker()
-    .setLngLat(paal.coordinates)
-    .onClick(() => {
-      // onClick() is a thing now!
-      console.log(paal.name);
-    })
+  // make a marker for each feature and add it to the map
+  new mapboxgl.Marker(el)
+    .setLngLat(feature.geometry.coordinates)
+    .setPopup(
+      new mapboxgl.Popup({ offset: 25 }) // add popups
+        .setHTML(
+          `<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p><p>${feature.properties.reservatie}</p>`
+        )
+    )
     .addTo(map);
-});
+}
