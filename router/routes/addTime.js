@@ -4,5 +4,6 @@ export const addTimeRoute = async (req, res) =>{
   res.render('index', {
     title: 'Coding the Curbs',
     time: timeBeginEnd[0] + ' ' + timeBeginEnd[timeBeginEnd.length - 1],
+    date: req.body.date
   })
 }

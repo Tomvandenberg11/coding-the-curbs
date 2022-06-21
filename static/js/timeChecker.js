@@ -1,12 +1,20 @@
 const placeTime = document.querySelectorAll("[tijdlatenzien]");
 const placeTimeButton = document.querySelector("[tijdlatenzienbutton]");
 const placeTimeValue = document.querySelector("[placeTimevalue]");
-const today = new Date();
+const placeDateValue = document.querySelector("[placeDatevalue]");
+let today = new Date();
 let minutes = today.getMinutes();
 let endTimeHours = today.getHours();
 let endTimeMinutes = minutes + 15;
 
 const startTime = () => {
+
+  let dd = String(today.getDate()).padStart(2, '0');
+  let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+  let yyyy = today.getFullYear();
+
+  let todayDate = mm + '/' + dd + '/' + yyyy;
+
   if (
     minutes === 0 ||
     minutes === 1 ||
@@ -51,6 +59,8 @@ const startTime = () => {
 
   placeTimeButton.value = "Reserveer " + beginTime + " tot " + endTime;
   placeTimeValue.value = beginTime + "," + endTime;
+  placeDateValue.value = todayDate;
+
 
   [].forEach.call(placeTime, function (placeTimes) {
     placeTimes.innerHTML = beginTime;
