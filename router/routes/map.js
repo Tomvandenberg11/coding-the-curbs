@@ -1,6 +1,6 @@
 export const mapRoute = async (req, res) =>{
   res.render('map', {
-    title: 'Wanneer wil je reserveren?',
+    title: 'Kaart',
     time: req.body.time
   })
 }
