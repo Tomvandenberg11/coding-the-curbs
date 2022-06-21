@@ -19,6 +19,7 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
+  overflow-x: hidden;
 }
 
 a {
@@ -30,13 +31,18 @@ header {
   width: 100%;
   display: flex;
   margin: 0 auto;
-  height: 70px;
+  height: 50px;
   background-color: var(--blue);
   align-items: center;
 }
 
+header .container {
+  display: flex;
+  justify-content: center;
+}
+
 header img {
-  width: 130px;
+  width: 70px;
 }
 
 .container {
@@ -290,6 +296,12 @@ section .timelistclass label:hover {
   text-align: left;
 }
 
+.verifyCode {
+  padding-top: 5vh;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
 .container article {
   max-width: 500px;
   text-align: left;
@@ -301,7 +313,7 @@ section .timelistclass label:hover {
   position: absolute;
   z-index: 0;
   background: gray;
-  top: 70px;
+  top: 50px;
   left: 0;
 }
 
@@ -351,42 +363,32 @@ section .timelistclass label:hover {
 
 h3 {
   font-family: var(--rajdhani);
-    max-width: 500px;
-    text-align: center;
-    font-size: 1.5em;
-    margin-top: 0.5em;
+  max-width: 500px;
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  text-align: left;
 }
 
-.succesfulPage a {
+.successfulPage h1 {
+  text-align: center;
+}
+
+.successfulPage a {
   background-color: var(--purple);
-    color: var(--white);
-    border: 3px solid var(--black);
-    border-width: 3px;
-    font-family: var(--rajdhani);
-    font-weight: 700;
-    font-size: 1.2em;
-    transform: scale(1);
-    transition: all 0.2s;
-    width: fit-content;
-    padding: 0.5em;
-    border-radius: 5px;
-    border-color: var(--blue);
-    margin-top: 2em;
+  color: var(--white);
+  border: 3px solid var(--black);
+  border-radius: 5px;
 }
 
-.succesfulPage a:hover {
-  background-color: #ededed;
-    color: var(--blue);
-    border-color: var(--blue);
-    border-width: 3px;
-    font-family: var(--rajdhani);
-    font-weight: 700;
-}
-
-.succesfulPage {
+.successfulPage {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: calc(30px + 5vh);
+}
+
+.successfulPage .button_select {
+  margin-bottom: 50px;
 }
 
 .errorMessage {

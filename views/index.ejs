@@ -2,22 +2,24 @@
 <% const randomCode = Math.floor(1000 + Math.random() * 9000) %>
 
 <div class="container margin-top30">
-  <article>
-    <h1>Reserveer smart zone van <%= time %></h1>
-    <p>Zo weet je zeker dat je er kunt staan.</p>
-  </article>
+  <div class="verifyCode">
+    <article>
+      <h1>Reserveer smart zone van <%= time %></h1>
+      <p>Zo weet je zeker dat je er kunt staan.</p>
+    </article>
 
-  <form action="/reservation" method="POST">
-    <input type="text" name="time" value="<%= time %>" hidden />
-    <label>Je nummerbord</label>
-    <input type="text" maxlength="8" name="kenteken" required />
+    <form action="/reservation" method="POST">
+      <input type="text" name="time" value="<%= time %>" hidden />
+      <label>Je nummerbord</label>
+      <input type="text" maxlength="8" name="kenteken" required />
 
-    <label>Je e-mailadres</label>
-    <input type="email" name="email" required />
-    <input type="number" name="code" value="<%= randomCode %>" hidden />
+      <label>Je e-mailadres</label>
+      <input type="email" name="email" required />
+      <input type="number" name="code" value="<%= randomCode %>" hidden />
 
-    <input type="submit" value="Maak reservering" />
-  </form>
+      <input type="submit" value="Maak reservering" />
+    </form>
+  </div>
 </div>
 
 <%- include('./components/footer.ejs') -%>
