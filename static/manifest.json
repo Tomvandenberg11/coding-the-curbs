@@ -1,0 +1,24 @@
+{
+  "short_name": "CtC",
+  "name": "Coding the Curbs",
+  "icons": [
+    {
+      "src": "/images/png/logo_512x512.png",
+      "type": "image/jpg",
+      "sizes": "300x300"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#4f52c9",
+  "description": "Coding the Curbs",
+  "screenshots": [
+    {
+      "src": "images/png/screenshot.png",
+      "type": "image/png",
+      "sizes": "540x720"
+    }
+  ]
+}
