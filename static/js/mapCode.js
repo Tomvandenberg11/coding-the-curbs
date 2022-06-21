@@ -1,8 +1,6 @@
 const testbuttonselector = document.getElementById("testbutton");
 let colormarker = document.getElementsByClassName("mapboxgl-marker");
 
-console.log(colormarker);
-
 // TO MAKE THE MAP APPEAR YOU MUST
 // ADD YOUR ACCESS TOKEN FROM
 // https://account.mapbox.com
@@ -56,13 +54,4 @@ palen.forEach((paal) => {
       console.log(paal.name);
     })
     .addTo(map);
-});
-
-testbuttonselector.addEventListener("click", function (e) {
-  if (colormarker.getPropertyValue('--colorMarker') === "#56b956") {
-    colormarker.setProperty('--colorMarker', 'red');
-  } else {
-    colormarker.setProperty('--colorMarker', '#56b956');
-  }
-  // updateMap();
 });
