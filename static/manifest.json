@@ -1,11 +1,16 @@
 {
-  "short_name": "CtC",
+  "short_name": "Coding the Curbs",
   "name": "Coding the Curbs",
   "icons": [
     {
       "src": "/images/png/logo_512x512.png",
       "type": "image/jpg",
-      "sizes": "300x300"
+      "sizes": "512x512"
+    },
+    {
+      "src": "/images/png/logo_big.png",
+      "type": "image/jpg",
+      "sizes": "2134x2134"
     }
   ],
   "start_url": "/",
@@ -13,12 +18,12 @@
   "display": "standalone",
   "scope": "/",
   "theme_color": "#4f52c9",
-  "description": "Coding the Curbs",
+  "description": "Coding the Curbs app for making reservations for a smart zone",
   "screenshots": [
     {
       "src": "images/png/screenshot.png",
       "type": "image/png",
-      "sizes": "540x720"
+      "sizes": "620x1340"
     }
   ]
 }
