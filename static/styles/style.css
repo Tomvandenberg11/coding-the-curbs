@@ -230,7 +230,6 @@ section .timelistclass label {
   opacity: 0.7;
 }
 
-
 .scrollable {
   height: 450px;
   overflow-x: hidden;
@@ -269,7 +268,6 @@ section .timelistclass label {
   transition: all 0.2s;
   width: fit-content;
   border-radius: 5px;
-  
 }
 
 .container .button_select2:hover {
@@ -314,12 +312,12 @@ section .timelistclass label {
 }
 
 .container .maptestbutton {
-    background-color: white;
-    position: fixed;
-    bottom: 70px;
-    width: 10em;
-    height: 4em;
-    z-index: 100;
+  background-color: white;
+  position: fixed;
+  bottom: 70px;
+  width: 10em;
+  height: 4em;
+  z-index: 100;
 }
 
 .mapboxgl-marker path {
@@ -347,7 +345,7 @@ section .timelistclass label {
 
 .mapboxgl-popup-content {
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .mapboxgl-popup-close-button {
@@ -363,18 +361,18 @@ section .timelistclass label {
 
 .verwijderBtn {
   background-color: var(--purple);
-    color: var(--white);
-    border: 3px solid var(--black);
-    font-family: var(--rajdhani);
-    font-weight: 700;
-    transform: scale(1);
-    transition: all 0.2s;
-    width: fit-content;
-    padding: 0.5em;
-    border-radius: 5px;
-    border-color: var(--blue);
-    margin: 0 !important;
-    font-size: 0.9em !important;
+  color: var(--white);
+  border: 3px solid var(--black);
+  font-family: var(--rajdhani);
+  font-weight: 700;
+  transform: scale(1);
+  transition: all 0.2s;
+  width: fit-content;
+  padding: 0.5em;
+  border-radius: 5px;
+  border-color: var(--blue);
+  margin: 0 !important;
+  font-size: 0.9em !important;
 }
 
 .verwijderBtn:hover {
@@ -423,33 +421,41 @@ h3 {
   font-size: 16px;
 }
 
-.errorContainer{
+.errorContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 15vh;
 }
-.errorImage{
+.errorImage {
   width: 13em;
-}   
-.errorH1{
+}
+.errorH1 {
   font-size: 2em;
   margin: 1em;
   font-family: var(--rajdhani);
 }
-.errorH2{
+.errorH2 {
   font-size: 1.5em;
-  margin: .5em;
+  margin: 0.5em;
   font-weight: 500;
   font-family: var(--rajdhani);
 }
 
 @media only screen and (max-width: 425px) {
-  #mainbutton{
+  #mainbutton {
     font-size: 4vw;
   }
-  #mainbutton2{
+  #mainbutton2 {
     font-size: 4vw;
   }
+}
+
+.offlineTekst {
+  font-family: var(--rajdhani);
+  max-width: 500px;
+  text-align: left;
+  font-size: 2em;
+  margin-bottom: 0.5em;
 }
