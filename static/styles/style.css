@@ -15,7 +15,7 @@
   padding: 0;
 }
 
-input, button, input[type="submit"] {
+input, input[type="submit"], button {
   -webkit-appearance: none;
 }
 
