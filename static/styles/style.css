@@ -15,6 +15,10 @@
   padding: 0;
 }
 
+input, button, input[type="submit"] {
+  -webkit-appearance: none;
+}
+
 body {
   width: 100%;
   height: 100%;
@@ -231,7 +235,7 @@ section .timelistclass label {
 }
 
 .scrollable {
-  height: 450px;
+  height: 350px;
   overflow-x: hidden;
   overflow-y: auto;
 }
