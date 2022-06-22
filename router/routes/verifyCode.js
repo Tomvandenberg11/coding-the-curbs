@@ -25,10 +25,10 @@ export const verifyCodeRoute = async (req, res) => {
       Mailer(email, plate, userCode)
     })
     .then(() => {
-        res.render("checkVerify", {
-          title: "Verifieer je kenteken",
-          errorMessage: ''
-        })
+      res.render("checkVerify", {
+        title: "Verifieer je kenteken",
+        errorMessage: ''
+      })
     })
     .catch(() => {
       res.render("verify", {
