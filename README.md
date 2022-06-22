@@ -51,7 +51,12 @@ Hier moet je de namen aanpassen naar jou database link.
 
 In het .env bestand zet je de MONGO_PASS & MAIL_PASS. Deze heb je nodig voor het wachtwoord van je [mongodb](https://mongodb.com/) password & [mailer](https://github.com/Tomvandenberg11/coding-the-curbs/wiki/Node-Mailer) password.
 
-## Gebruikershandleiding en functies
+## Functies
+- Smartzone reserveren voor de tijd nu
+- Smartzone reserveren voor latere tijd deze dag
+- Reservatie beheren & bekijken
+- Mail met login code
+- Kaart met Smartzones
 
 ## Auteurs 
 De makers van dit project zijn: [Tim de Roller](https://github.com/maggness), [Tom Van den berg](https://github.com/Tomvandenberg11), [Fabian Vis](https://github.com/fabian-vis) en  [Sietse Roos](https://github.com/sietse333).
