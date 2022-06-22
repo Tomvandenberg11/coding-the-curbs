@@ -4,6 +4,9 @@
     <div class="verifyCode">
         <h1>Voer je toegangscode in</h1>
         <p>Voer hier je toegangscode in die je zojuist in je e-mail hebt gehad.</p>
+        <% if (errorMessage) {%>
+            <p class="errorMessage"><%= errorMessage %></p>
+        <%} %>
         <section>
             <form action="/checkVerify" method="POST">
 

@@ -4,9 +4,7 @@ export const deleteRoute = async (req, res) => {
     const code = req.body.code
     console.log(code)
 
-    reservationsCollection.remove({
-            'code': code
-        })
+    reservationsCollection.remove({ 'code': code })
         .then(() => {
             res.render('manage', {
                 title: 'Manage your reservation',
