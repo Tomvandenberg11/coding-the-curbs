@@ -1,5 +1,4 @@
-<%- include('./components/head.ejs') -%> 
-<% const randomCode = Math.floor(1000 + Math.random() * 9000) %>
+<%- include('./components/head.ejs') -%>
 
 <div class="container margin-top30">
   <div class="verifyCode">
@@ -15,7 +14,6 @@
 
       <label>Je e-mailadres</label>
       <input type="email" name="email" required />
-      <input type="number" name="code" value="<%= randomCode %>" hidden />
 
       <input type="submit" value="Maak reservering" />
     </form>
