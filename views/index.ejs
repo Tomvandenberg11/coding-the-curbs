@@ -1,4 +1,7 @@
 <%- include('./components/head.ejs') -%>
+<script src="/js/dateChecker.js" defer></script>
+
+<% const randomCode = Math.floor(1000 + Math.random() * 9000) %>
 
 <div class="container margin-top30">
   <div class="verifyCode">
@@ -9,6 +12,7 @@
 
     <form action="/reservation" method="POST">
       <input type="text" name="time" value="<%= time %>" hidden />
+      <input type="text" name="date" placeDatevalue hidden value="">
       <label>Je nummerbord</label>
       <input type="text" maxlength="8" name="kenteken" required />
 

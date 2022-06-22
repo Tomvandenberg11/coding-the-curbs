@@ -1,12 +1,13 @@
 const placeTime = document.querySelectorAll("[tijdlatenzien]");
 const placeTimeButton = document.querySelector("[tijdlatenzienbutton]");
 const placeTimeValue = document.querySelector("[placeTimevalue]");
-const today = new Date();
+let today = new Date();
 let minutes = today.getMinutes();
 let endTimeHours = today.getHours();
 let endTimeMinutes = minutes + 15;
 
 const startTime = () => {
+
   if (
     minutes === 0 ||
     minutes === 1 ||
@@ -51,6 +52,7 @@ const startTime = () => {
 
   placeTimeButton.value = "Reserveer " + beginTime + " tot " + endTime;
   placeTimeValue.value = beginTime + "," + endTime;
+
 
   [].forEach.call(placeTime, function (placeTimes) {
     placeTimes.innerHTML = beginTime;

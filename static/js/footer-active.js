@@ -3,17 +3,17 @@ const footerButton2 = document.getElementById('footer-button-2')
 const footerButton3 = document.getElementById('footer-button-3')
 footerButton1.classList.add('active')
 
-const installServiceWorker = async () => {
-    if ('serviceWorker' in navigator) {
-      try {
-        await navigator.serviceWorker.register('/service.js')
-      } catch (error) {
-        console.error(`Registration failed with ${error}`)
-      }
-    }
-  }
+// const installServiceWorker = async () => {
+//     if ('serviceWorker' in navigator) {
+//       try {
+//         await navigator.serviceWorker.register('/service.js')
+//       } catch (error) {
+//         console.error(`Registration failed with ${error}`)
+//       }
+//     }
+//   }
   
-  installServiceWorker()
+//   installServiceWorker()
 
 const sPath = window.location.pathname
 const sPage = sPath.substring(sPath.lastIndexOf('/') + 1)

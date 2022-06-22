@@ -8,8 +8,9 @@
       <p>Kies of je nu een reservering wilt maken op de Twijnstraat, of een reservering voor een later tijdstip.</p>
     </article>
     <form action="/addtime" method="post" name="checkTime" id="checkTime" novalidate>
-      <input type="checkbox" name="time" id="tijdnu" required hidden checked value="">
-      <input class="button_select" id="mainbutton" type="submit" value="">
+      <input type="checkbox" name="time" id="tijdnu" placeTimevalue required hidden checked value="">
+      <input type="checkbox" name="date" id="datenu" placeDatevalue required hidden checked value="">
+      <input class="button_select" id="mainbutton" tijdlatenzienbutton type="submit" value="">
     </form>
     <a href="/timeList">
       <p class="button_select2" id="mainbutton2">Later of langere tijd kiezen</p>
