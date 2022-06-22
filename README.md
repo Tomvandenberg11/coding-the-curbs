@@ -19,6 +19,8 @@ Coding the Curbs is een start-up die sinds januari 2020 werkt aan het slimmer ma
 
 
 ## Poster
+![image](https://user-images.githubusercontent.com/30145681/175009279-108f1ca3-005b-4711-8eaa-86f40af691dd.png) ![image](https://user-images.githubusercontent.com/30145681/175009334-da2614a5-fcf1-4964-921f-d48927fc71ad.png)
+
 
 ## Live demo
 https://coding-the-curbs.herokuapp.com/
