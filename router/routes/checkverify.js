@@ -2,7 +2,6 @@ import {reservationsCollection} from './../../modules/mongoClient.js'
 
 export const checkVerifyRoute = async (req, res) => {
   const code = req.body.code
-  let filtered
 
   reservationsCollection.find().toArray()
     .then((result) => {
@@ -13,17 +12,17 @@ export const checkVerifyRoute = async (req, res) => {
             [key]: obj[key]
           })))
 
-      filtered = result.filter(result, item => item.code === code)
+      let filtered = result.filter(result, item => item.code === code)
       filtered = filtered[Object.keys(filtered)[0]]
-    })
-    .then(() => {
+
       res.render('manage', {
         title: 'Manage your reservation',
         reservation: filtered,
         errorMessage: ''
       })
     })
-    .catch(() => {
+    .catch((err) => {
+      console.log(err)
       res.render("checkVerify", {
         title: "Verifieer je kenteken",
         errorMessage: 'Je bevestigingscode is onjuist. Probeer het opnieuw.'
