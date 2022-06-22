@@ -17,7 +17,6 @@
 ## Beschrijving
 Coding the Curbs is een start-up die sinds januari 2020 werkt aan het slimmer maken van de steden. Door de ruimte in een stad te 'coderen' is het mogelijk om plekken diverse functies te laten vervullen op verschillende momenten. Denk daarbij aan een parkeerplek die ruimte biedt voor laden & lossen doordeweeks, en voor terrassen in het weekend, de zogenaamde Smart Zones. Via een mobiele en webapplicatie kunnen gebruikers ter plekke een reservering maken van een Smart Zone. Op die manier kunnen ze onder het vooraf gereserveerde tijdstip gebruik maken van deze ruimte. Bij de Smart Zone is er een Smart Sign (digitaal scherm) aanwezig die de huidige reserveringen en informatie laat zien.
 
-
 ## Poster
 ![image](https://user-images.githubusercontent.com/30145681/175009279-108f1ca3-005b-4711-8eaa-86f40af691dd.png) ![image](https://user-images.githubusercontent.com/30145681/175009334-da2614a5-fcf1-4964-921f-d48927fc71ad.png)
 
@@ -57,6 +56,9 @@ In het .env bestand zet je de MONGO_PASS & MAIL_PASS. Deze heb je nodig voor het
 - Reservatie beheren & bekijken
 - Mail met login code
 - Kaart met Smartzones
+
+## Documentatie
+Documentatie is te vinden in de [WIKI](https://github.com/Tomvandenberg11/coding-the-curbs/wiki)
 
 ## Auteurs 
 De makers van dit project zijn: [Tim de Roller](https://github.com/maggness), [Tom Van den berg](https://github.com/Tomvandenberg11), [Fabian Vis](https://github.com/fabian-vis) en  [Sietse Roos](https://github.com/sietse333).
