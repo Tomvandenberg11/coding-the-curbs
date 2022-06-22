@@ -37,3 +37,4 @@ De makers van dit project zijn: [Tim de Roller](https://github.com/maggness), [T
 
 
 ## Licentie
+GPL-3.0 license
