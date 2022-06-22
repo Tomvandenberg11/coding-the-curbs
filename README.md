@@ -26,11 +26,32 @@ Coding the Curbs is een start-up die sinds januari 2020 werkt aan het slimmer ma
 https://coding-the-curbs.herokuapp.com/
 
 ## Installatie
-Je kan de website bekijken op de link hierboven. Al wil je zelf aan het project  werken moet je deze repository clonen en npm install in de terminal uitvoeren. Verder heb je ook de .env keys nodig.
+Om dit project local te laten draaien kun je dit project clone met: `gh repo clone Tomvandenberg11/coding-the-curbs`.
+
+Voor de installatie doe je:
+``` terminal 
+npm install
+```
+
+Om de applicatie te runnen doe je:
+``` terminal
+npm run dev (nodemon)
+npm start (node)
+```
+
+We gebruiken een database van mongodb, hier moet je een account voor aanmaken. Dit kan op: https://www.mongodb.com/. 
+- Je maakt een project aan
+- Maakt een database
+- Maakt een collection aan
+In de mongoClient.js op regel 19 staat
+``` js 
+.connect(`mongodb+srv://codingthecurbsminor2022:${MONGO_PASS}@codingthecurbs.ln7wtad.mongodb.net/?retryWrites=true&w=majority` 
+```
+Hier moet je de namen aanpassen naar jou database link.
+
+In het .env bestand zet je de MONGO_PASS & MAIL_PASS. Deze heb je nodig voor het wachtwoord van je mongodb password & mailer password.
 
 ## Gebruikershandleiding en functies
-
-## Checklist
 
 ## Auteurs 
 De makers van dit project zijn: [Tim de Roller](https://github.com/maggness), [Tom Van den berg](https://github.com/Tomvandenberg11), [Fabian Vis](https://github.com/fabian-vis) en  [Sietse Roos](https://github.com/sietse333).
