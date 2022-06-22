@@ -49,7 +49,7 @@ In de mongoClient.js op regel 19 staat
 ```
 Hier moet je de namen aanpassen naar jou database link.
 
-In het .env bestand zet je de MONGO_PASS & MAIL_PASS. Deze heb je nodig voor het wachtwoord van je mongodb password & mailer password.
+In het .env bestand zet je de MONGO_PASS & MAIL_PASS. Deze heb je nodig voor het wachtwoord van je [mongodb](https://mongodb.com/) password & [mailer](https://github.com/Tomvandenberg11/coding-the-curbs/wiki/Node-Mailer) password.
 
 ## Gebruikershandleiding en functies
 
