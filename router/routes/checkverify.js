@@ -15,7 +15,6 @@ export const checkVerifyRoute = async (req, res) => {
 
       let filtered = result.filter(result, item => item.code === code)
       filtered = filtered[Object.keys(filtered)[0]]
-      console.log(filtered)
 
       res.render('manage', {
         title: 'Manage your reservation',

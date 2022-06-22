@@ -1,5 +1,6 @@
-<%- include('./components/head.ejs') -%> 
+<%- include('./components/head.ejs') -%>
 <script src="/js/dateChecker.js" defer></script>
+
 <% const randomCode = Math.floor(1000 + Math.random() * 9000) %>
 
 <div class="container margin-top30">
@@ -17,7 +18,6 @@
 
       <label>Je e-mailadres</label>
       <input type="email" name="email" required />
-      <input type="number" name="code" value="<%= randomCode %>" hidden />
 
       <input type="submit" value="Maak reservering" />
     </form>
