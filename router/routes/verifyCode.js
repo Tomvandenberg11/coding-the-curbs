@@ -27,6 +27,7 @@ export const verifyCodeRoute = async (req, res) => {
     .then(() => {
         res.render("checkVerify", {
           title: "Verifieer je kenteken",
+          errorMessage: ''
         })
     })
     .catch(() => {
